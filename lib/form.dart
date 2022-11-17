@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_assignment/models/drawer.dart';
+import 'package:flutter_assignment/drawer.dart';
 
 class Budget {
   String judul;
@@ -25,7 +25,7 @@ class _FormBudgetPageState extends State<FormBudgetPage> {
   String? _judul;
   int? _nominal;
   String? jenis;
-  List<String> listJenis = ['Pemasukan', 'Pengeluaran'];
+  List<String> listJenis = ['Income', 'Outcome'];
   DateTime date = DateTime.now();
 
   @override
@@ -51,7 +51,7 @@ class _FormBudgetPageState extends State<FormBudgetPage> {
                         padding: const EdgeInsets.all(8.0),
                         child: TextFormField(
                           decoration: InputDecoration(
-                            hintText: "Judul",
+                            hintText: "Title",
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(5.0),
                             ),
@@ -104,7 +104,7 @@ class _FormBudgetPageState extends State<FormBudgetPage> {
                             },
                             validator: (String? value) {
                               if (value == null || value.isEmpty) {
-                                return 'Nominal tidak boleh kosong!';
+                                return 'Nominal cannot be empty!';
                               }
                               return null;
                             },
@@ -115,7 +115,7 @@ class _FormBudgetPageState extends State<FormBudgetPage> {
                           child: DropdownButton(
                             hint: Container(
                               child: const Text(
-                                "Pilih Jenis",
+                                "Choose Type",
                                 style: TextStyle(color: Colors.grey),
                                 textAlign: TextAlign.center,
                               ),
@@ -149,7 +149,7 @@ class _FormBudgetPageState extends State<FormBudgetPage> {
                               color: Colors.grey,
                             ),
                             label: const Text(
-                              "Pilih Tanggal",
+                              "Choose Date",
                               style: TextStyle(color: Colors.grey),
                             ),
                             onPressed: () async {
@@ -183,7 +183,7 @@ class _FormBudgetPageState extends State<FormBudgetPage> {
                     alignment: Alignment.bottomCenter,
                     child: TextButton(
                       child: const Text(
-                        "Simpan",
+                        "Save",
                         style: TextStyle(color: Colors.white),
                       ),
                       style: TextButton.styleFrom(
@@ -212,14 +212,14 @@ class _FormBudgetPageState extends State<FormBudgetPage> {
                                       children: <Widget>[
                                         Center(
                                           child: const Text(
-                                              'Jenis tidak boleh kosong'),
+                                              'Type cannot be empty'),
                                         ),
                                         SizedBox(height: 20),
                                         TextButton(
                                           onPressed: () {
                                             Navigator.pop(context);
                                           },
-                                          child: Text('Kembali'),
+                                          child: Text('return'),
                                         ),
                                       ],
                                     ),
@@ -245,14 +245,14 @@ class _FormBudgetPageState extends State<FormBudgetPage> {
                                     children: <Widget>[
                                       Center(
                                         child: const Text(
-                                            'Berhasil Menambahkan Data'),
+                                            'Success Adding Data'),
                                       ),
                                       SizedBox(height: 20),
                                       TextButton(
                                         onPressed: () {
                                           Navigator.pop(context);
                                         },
-                                        child: Text('Kembali'),
+                                        child: Text('Return'),
                                       ),
                                     ],
                                   ),

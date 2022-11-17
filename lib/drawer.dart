@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_assignment/main.dart';
-import 'package:flutter_assignment/form_budget.dart';
-import 'package:flutter_assignment/data_budget.dart';
+import 'package:flutter_assignment/form.dart';
+import 'package:flutter_assignment/data.dart';
 
 class DrawerApp extends StatelessWidget {
   const DrawerApp({super.key});
@@ -13,18 +13,18 @@ class DrawerApp extends StatelessWidget {
         child: Column(
           children: [
             ListTile(
-              title: const Text('counter_7'),
+              title: const Text('flutter_assignment'),
               onTap: () {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          const MyHomePage(title: 'counter_7')),
+                          const MyHomePage(title: 'flutter_assignment')),
                 );
               },
             ),
             ListTile(
-              title: const Text('Tambah Budget'),
+              title: const Text('Add Budget'),
               onTap: () {
                 Navigator.pushReplacement(
                   context,
