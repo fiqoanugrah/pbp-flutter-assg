@@ -1,4 +1,7 @@
+import 'package:flutter_assigment/drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_assigment/data_budget.dart';
+import 'package:flutter_assigment/form_budget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -91,6 +94,7 @@ void _setText() {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+      drawer: DrawerApp(),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
