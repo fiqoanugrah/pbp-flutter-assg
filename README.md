@@ -63,6 +63,22 @@ Navigator manages the stack of routes and provides two ways to manage the stack 
 
 ## Checklist implementation
 
-1. Create three navigation buttons on the drawer
+1. Create three navigation buttons on the drawer 
 2. Create a form page
 3. Create a budget data page
+
+## Task 9: Web Service Integration on Flutter
+## Can we fetch JSON data without creating a model first? If so, is it better than creating a model before fetching the JSON data?
+You can, but it's better to use a model because the model represents the json. In addition, the model can also ensure the data type of each model field clearly.
+
+## State what widgets you use in this project and explain their functions.
+1. FutureBuilder = To construct a widget based on a snapshot.
+2. Column = Represents columns
+3. BoxDecoration = to decorate flutter box elements
+4. FutureBuilder = create a widget based on the last snapshot.
+
+## Describe the mechanism for fetching data from json so that it can be displayed in Flutter.
+This is done by fetching the method in the file, then the data is converted into a json model. From the model is stored in the list, and then each element of the list is displayed on the page.
+
+## Explain how you would implement the checklist above.
+Create a model based on the json to fetch. Performs a fetch by creating an async Future. Returns data from an asynchronous function.
